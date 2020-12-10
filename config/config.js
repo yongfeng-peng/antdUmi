@@ -12,21 +12,28 @@ export default {
   //     // 这里暂时还没有添加配置，该插件还不会有作用，我们会在后面的课程按照需求打开相应的配置
   //   }],
   // ],
+  theme: {
+    '@primary-color': '#30b767', // 配置文件放置的位置 .umirc.js 或 config/config.js
+  },
   dva: {}, // 基于 redux、redux-saga 和 react-router 的轻量级前端框架及最佳实践沉淀
   antd: {},
   routes: [{
-    path: '/list',
-    component: '../page/list'
-
-
-    // path: '/',
-    // component: '../layout',
-    // routes: [
-    //   {
-    //     path: 'puzzleCards',
-    //     component: 'PuzzleCards'
-    //   }
-    // ]
+    path: '/',
+    component: '../layout',
+    routes: [
+      {
+        path: 'puzzleCards',
+        component: 'PuzzleCards'
+      },
+      {
+        path: 'list',
+        component: '../page/list'
+      },
+      {
+        path: 'helloworld',
+        component: 'Helloworld'
+      },
+    ]
 
     // path: '/',
     // component: '../layout',
