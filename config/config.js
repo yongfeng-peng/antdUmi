@@ -15,14 +15,18 @@ export default {
   dva: {}, // 基于 redux、redux-saga 和 react-router 的轻量级前端框架及最佳实践沉淀
   antd: {},
   routes: [{
-    path: '/',
-    component: '../layout',
-    routes: [
-      {
-        path: 'puzzleCards',
-        component: 'PuzzleCards'
-      }
-    ]
+    path: '/list',
+    component: '../page/list'
+
+
+    // path: '/',
+    // component: '../layout',
+    // routes: [
+    //   {
+    //     path: 'puzzleCards',
+    //     component: 'PuzzleCards'
+    //   }
+    // ]
 
     // path: '/',
     // component: '../layout',
