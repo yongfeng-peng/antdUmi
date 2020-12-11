@@ -5,17 +5,17 @@
   webpack 实现了这套规范。umi 依赖 webpack，默认开启了 CSS modules 特性
 */
 
-@grey-color: rgba(0, 0, 0, .25);
+// @grey-color: rgba(0, 0, 0, .25);
 
-.hello {
-  font-size: 32px;
-  font-weight: bold;
-  color: #30b767;
-  .deleted {
-    text-decoration: line-through;
-    background-color: @grey-color;
-  }
-}
+// .hello {
+//   font-size: 32px;
+//   font-weight: bold;
+//   color: #30b767;
+//   .deleted {
+//     text-decoration: line-through;
+//     background-color: @grey-color;
+//   }
+// }
 
 // 在 css/less 文件中定义覆盖
 /**
@@ -23,8 +23,8 @@ CSS modules 的 global 语法 派上了用场。它允许我们声明一个 clas
 global 不应该被滥用，
 特别地我们建议：若想在某个文件中覆盖 antd 样式，请加上一个类似 .override-ant-btn 的类包裹住 global 修饰的名称，以避免全局样式声明分散在项目各处。
 */
-.override-ant-btn {
-  :global(.ant-btn) {
-    border-radius: 16px;
-  }
-}
+// .override-ant-btn {
+//   :global(.ant-btn) {
+//     border-radius: 16px;
+//   }
+// }
