@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu } from 'antd';
 import pathToRegexp from 'path-to-regexp';
 import { Link } from 'umi';
+import * as Icon from '@ant-design/icons';
 import styles from './index.less';
 import { urlToList } from '../_utils/pathTools';
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
+
 
 // Allow menu.js config icon as string or ReactNode
 //   icon: 'setting',
@@ -16,10 +18,12 @@ const getIcon = icon => {
   if (typeof icon === 'string' && icon.indexOf('http') === 0) {
     return <img src={icon} alt="icon" className={`${styles.icon} sider-menu-item-img`} />;
   }
-  if (typeof icon === 'string') {
-    // return <Icon type={icon} />;
-    return <icon />;
-  }
+  // if (typeof icon === 'string') {
+  //   console.log(icon)
+  //   // console.log({<icon[icon] />})
+  //   // return <Icon type={icon} />;
+  //   return `<${icon[icon]} />`;
+  // }
   return icon;
 };
 
@@ -86,7 +90,14 @@ export default class SiderMenu extends PureComponent {
     if (/^https?:\/\//.test(itemPath)) {
       return (
         <a href={itemPath} target={target}>
-          {icon}
+        {
+          icon ? React.createElement(
+              Icon[icon],
+              {
+                className: 'icon',
+              }
+            ) : ''
+          }
           <span>{name}</span>
         </a>
       );
@@ -104,7 +115,14 @@ export default class SiderMenu extends PureComponent {
             : undefined
         }
       >
-        {icon}
+      {
+       icon ?  React.createElement(
+          Icon[icon],
+          {
+            className: 'icon',
+          }
+        ) : ''
+      } 
         <span>{name}</span>
       </Link>
     );
@@ -122,7 +140,15 @@ export default class SiderMenu extends PureComponent {
             title={
               item.icon ? (
                 <span>
-                  {getIcon(item.icon)}
+                  {/*{getIcon(item.icon)}*/}
+                 {
+                    React.createElement(
+                      Icon[getIcon(item.icon)],
+                      {
+                        className: 'icon',
+                      }
+                    )
+                  }
                   <span>{item.name}</span>
                 </span>
               ) : (

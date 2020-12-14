@@ -8,20 +8,23 @@ export function isUrl(path) {
 const menuData = [
   {
     name: 'Pages',
-    icon: 'dashboard',
+    icon: 'AppstoreOutlined',
     path: 'dashboard',
     children: [
       {
         name: '分析页',
         path: 'analysis',
+        // icon: 'DashboardOutlined',
       },
       {
         name: '监控页',
         path: 'monitor',
+        // icon: 'DashboardOutlined',
       },
       {
         name: '工作台',
         path: 'workplace',
+        // icon: 'DashboardOutlined',
         // hideInBreadcrumb: true,
         // hideInMenu: true,
       },
@@ -29,7 +32,7 @@ const menuData = [
   },
   {
     name: 'typescript',
-    icon: 'dashboard',
+    icon: 'AppstoreAddOutlined',
     path: 'typescript',
   }
 ];

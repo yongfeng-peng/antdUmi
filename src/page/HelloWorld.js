@@ -2,6 +2,9 @@
 import { Card, Button, Upload, message } from 'antd';
 import { VerticalAlignTopOutlined } from '@ant-design/icons';
 
+import  * as Icon from '@ant-design/icons';
+var iconType = 'CloudDownloadOutlined';
+
 import myStyles from '../assets/styles.less';
 
 const lang = window.navigator.language;
@@ -62,6 +65,17 @@ export default () => {
         <Button icon={<VerticalAlignTopOutlined />}> Click to Upload</Button>
       </Upload>
       <a href="http://somehost/somefile.zip" download="filename.zip">Download file</a>
+      <div > 
+      {
+        React.createElement(
+          Icon[iconType],
+          {
+            style:{ fontSize: '16px', color: '#08c' }
+          }
+        )
+      }
+      </div>
+
     </div>
   );
 }
