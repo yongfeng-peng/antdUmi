@@ -31,9 +31,9 @@ const menuData = [
     ],
   },
   {
-    name: 'typescript',
-    icon: 'AppstoreAddOutlined',
-    path: 'typescript',
+    name: '图表',
+    icon: 'BarChartOutlined',
+    path: 'list',
   }
 ];
 

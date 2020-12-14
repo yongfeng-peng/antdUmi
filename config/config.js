@@ -27,17 +27,37 @@ export default {
     component: '../layout',
     routes: [
       {
-        path: 'puzzleCards',
-        component: 'PuzzleCards'
+        path: '/',
+        component: './index'
+      },
+      {
+        path: 'dashboard',
+        routes: [
+          { path: 'analysis', component: './dashboard/analysis' },
+          { path: 'monitor', component: './dashboard/monitor' },
+          { path: 'workplace', component: './dashboard/workplace' },
+        ]
+      },
+      // {
+      //   path: 'puzzleCards',
+      //   component: 'PuzzleCards'
+      // },
+      {
+        path: 'list',
+        component: './list/index'
       },
       {
         path: 'list',
-        component: '../page/list'
+        component: './list/index'
       },
       {
-        path: 'helloworld',
-        component: 'Helloworld'
+        path: '*',
+        component: './NoFoundPage'
       },
+      // {
+      //   path: 'helloworld',
+      //   component: 'Helloworld'
+      // },
     ]
 
     // path: '/',
@@ -89,4 +109,10 @@ export default {
     //   component: './layout/index',
     // }
   }],
+  // proxy: {
+  //   '/dev': {
+  //     target: 'https://08ad1pao69.execute-api.us-east-1.amazonaws.com',
+  //     changeOrigin: true,
+  //   },
+  // },
 }
